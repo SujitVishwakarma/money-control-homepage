@@ -8,7 +8,7 @@
   
     async function fetchCommodities(type) {
       try {
-        const response = await fetch(`https://financialmodelingprep.com/api/v3/quote/${type}?apikey=3GMLE176V3P7MBH0`);
+        const response = await fetch(`https://financialmodelingprep.com/api/v3/quote/${type}?apikey=enter-your-key`);
         const data = await response.json();
         commodities = data;
       } catch (error) {
