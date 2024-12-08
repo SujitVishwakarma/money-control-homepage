@@ -1,0 +1,45 @@
+
+--- 
+import Layout from '../layouts/Layout.astro'; 
+import NiftyBox from "../components/newsContents/NiftyBox.svelte"; 
+import NavWrapeer from "../components/NavWrapeer.svelte";
+import Wrapper from "../components/Wrapper.svelte";
+import BottomNavBar from "../components/BottomNavBar.svelte";
+import NewsList from "../components/newsContents/NewsList.svelte";
+import ChatBox from "../components/ChatBox.svelte";
+import Footer from "../components/Footer.svelte"; 
+import Magazine from "../components/newsContents/Magazine.svelte";
+import StocksData from "../components/tableData/StocksData.svelte";
+import CommunityViews from "../components/tableData/CommunityViews.svelte";
+import IpoSnapshot from "../components/ipo/IpoSnapshot.svelte";
+import WorldComapny from "../components/world/WorldComapny.svelte";
+import NewsNotMiss from "../components/newsContents/NewsNotMiss.svelte";
+let currentCategory = 'general';
+
+  function setCategory(category) {
+    currentCategory(category)
+  }
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <NavWrapeer client:visible/>
+    <NiftyBox client:visible/>
+    <NewsList category={currentCategory}  client:visible/>
+    <Magazine client:visible/>
+    <StocksData client:visible/>
+    <NewsNotMiss client:visible/>
+    <CommunityViews client:visible/>
+    <IpoSnapshot client:visible/>
+    <WorldComapny/>
+
+    <BottomNavBar/>
+    <ChatBox/>
+    <Footer client:visible/>
+  </main>
+</Layout>
+<style>
+   main::-webkit-scrollbar {
+    display: none;
+  }
+</style>

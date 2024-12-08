@@ -1,0 +1,82 @@
+
+---
+import NavWrapeer from "../components/NavWrapeer.svelte";
+import Footer from "../components/Footer.svelte";
+import ChatBox from "../components/ChatBox.svelte";
+import TopHeader from "../components/TopHeader.svelte";
+---
+
+<!doctype html>
+<html lang="en" data-theme="cupcake">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Sachtek.com</title>
+	</head>
+	<body>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+		background-color: rgb(228, 225, 221);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #081c05;
+		/* background-size: 224px; */
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	main{
+		width: 100%;
+	}
+	main::-webkit-scrollbar {
+    display: none;
+	
+  }
+  @media (max-width:768px){
+		main{
+			width: 106%;
+		}
+	}
+	@media (max-width:452px){
+		main{
+			width: 121%;
+		}
+	}
+	@media (max-width:375px){
+		main{
+			width: 130%;
+		}
+	}
+  @media (max-width:320px){
+		main{
+			width: 161%;
+		}
+	}
+
+</style>
