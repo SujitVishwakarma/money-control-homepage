@@ -18,7 +18,7 @@
   
     async function fetchCurrencies() {
       try {
-        const response = await fetch('https://financialmodelingprep.com/api/v3/forex?apikey=CadzEeHctU1ELlc85UwDRsXaVUMBwj8F');
+        const response = await fetch('https://financialmodelingprep.com/api/v3/forex?apikey=enter-your-key');
         const data = await response.json();
         currencies = data;
       } catch (error) {
@@ -28,7 +28,7 @@
   
     async function fetchBonds() {
       try {
-        const response = await fetch('https://financialmodelingprep.com/api/v3/bonds?apikey=CadzEeHctU1ELlc85UwDRsXaVUMBwj8F');
+        const response = await fetch('https://financialmodelingprep.com/api/v3/bonds?apikey=enter-your-keyF');
         const data = await response.json();
         bonds = data;
       } catch (error) {
