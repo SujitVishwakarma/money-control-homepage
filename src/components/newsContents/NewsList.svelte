@@ -19,7 +19,7 @@
 
   async function fetchNews(category) {
     try {
-      const response = await fetch(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=5bcf1bec6f9a4a1b8e8c31fcc1162132`);
+      const response = await fetch(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=xyz`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
