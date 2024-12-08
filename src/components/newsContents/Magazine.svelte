@@ -3,7 +3,7 @@
   import axios from 'axios';
   import TopHeader from '../TopHeader.svelte';
 
-  const API_KEY = '5bcf1bec6f9a4a1b8e8c31fcc1162132';
+  const API_KEY = '';
   let magazines = [];
   let articles = [];
 
